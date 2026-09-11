@@ -1,161 +1,116 @@
-E-Commerce Database Management System – Week 1
+# E-Commerce Customer Database
 
-What We Did
-In Week 1, we started developing an E-Commerce Database Management System using MySQL.
+## Week 1 - Requirement Analysis and Customer Database Module
 
-The main focus of Week 1 was to understand the requirements of an e-commerce system and create the Customer Database Module.
+This project is a basic database module for an E-Commerce Business Management System. It focuses on analyzing the business requirements and creating a Customer database table using MySQL.
 
-1. Requirement Analysis
-First, we analyzed what information an e-commerce website needs to store.
+## Objectives
 
-We identified the following main entities:
+- Analyze the requirements of an E-Commerce business.
+- Identify the main entities involved in the system.
+- Design a Customer table.
+- Create the database and Customer table using MySQL.
+- Insert customer records.
+- Perform CRUD operations on customer data.
 
-Customer – Stores customer details.
-Product – Stores product information.
-Seller – Stores seller details.
-Order – Stores customer orders.
-Payment – Stores payment information.
-Review – Stores customer reviews and ratings.
-These entities will be used to develop the complete e-commerce database in future weeks.
+## Main Entities
 
-2. Customer Table Design
-For Week 1, we focused on the Customer entity.
+The main entities identified for the E-Commerce system are:
 
-We designed a Customer table with the following fields:
+- Customer
+- Product
+- Order
+- Payment
+- Seller
+- Review
 
-customer_id
-first_name
-last_name
-email
-phone
-address
-city
-state
-pincode
-created_at
-The customer_id is used as the Primary Key to uniquely identify each customer.
+## Customer Table
 
-3. Database Creation
-We created a MySQL database named:
+The Customer table contains the following attributes:
 
-ecommerce_db
-Then, we created the Customer table inside this database.
+| Column | Data Type | Constraint |
+|---|---|---|
+| Customer_ID | INT | PRIMARY KEY |
+| Customer_Name | VARCHAR(100) | NOT NULL |
+| Email | VARCHAR(100) | NOT NULL, UNIQUE |
+| Phone | VARCHAR(15) | NOT NULL, UNIQUE |
+| Address | VARCHAR(255) | NOT NULL |
 
-4. Constraints Used
-We used different SQL constraints to maintain data accuracy.
+## Technologies Used
 
-PRIMARY KEY
-customer_id INT AUTO_INCREMENT PRIMARY KEY
-It gives every customer a unique ID.
+- MySQL
+- MySQL Workbench
+- SQL
 
-NOT NULL
-Used for fields that must contain data:
+## CRUD Operations
 
-first_name
-last_name
-email
-address
-city
-state
-pincode
-UNIQUE
-Used for:
+The following CRUD operations are performed on the Customer table:
 
-email
-phone
-This prevents duplicate email addresses and phone numbers.
+### Create
 
-AUTO_INCREMENT
-Automatically generates customer IDs:
+The database and Customer table are created using SQL.
 
-1
-2
-3
-4
-5
-DEFAULT
-The created_at field automatically stores the date and time when a customer is added.
+### Read
 
-5. Insert Operation
-We inserted sample customer records into the Customer table using the INSERT command.
+Customer records are displayed using the SELECT command.
 
-Example:
+### Update
 
-INSERT INTO Customer
-(first_name, last_name, email, phone, address, city, state, pincode)
-VALUES
-('Bala', 'Suthan', 'bala@gmail.com', '9876543210',
- 'Main Road', 'Thoothukudi', 'Tamil Nadu', '628001');
-We added multiple customers to test the database.
+Existing customer information is modified using the UPDATE command.
 
-6. Read Operation
-We used the SELECT command to display customer records.
+### Delete
 
-SELECT * FROM Customer;
-This allowed us to check whether the inserted data was stored correctly.
+Customer records are removed using the DELETE command.
 
-7. Update Operation
-We used the UPDATE command to modify existing customer information.
+## SQL Operations
 
-For example:
+The project includes the following SQL operations:
 
-UPDATE Customer
-SET phone = '9000000001',
-    city = 'Madurai'
-WHERE customer_id = 1;
-Then, we used SELECT to verify the changes.
+- CREATE DATABASE
+- CREATE TABLE
+- INSERT
+- SELECT
+- UPDATE
+- DELETE
 
-8. Delete Operation
-We used the DELETE command to remove a customer record.
+## Sample Customer Records
 
-DELETE FROM Customer
-WHERE customer_id = 5;
-After deleting the record, we used:
+| Customer_ID | Customer_Name | Email | Phone | Address |
+|---|---|---|---|---|
+| 101 | Arun Kumar | arun@gmail.com | 9876543210 | Chennai |
+| 102 | Priya S | priya@gmail.com | 9876543211 | Madurai |
+| 103 | Karthik R | karthik@gmail.com | 9876543212 | Coimbatore |
+| 104 | Divya M | divya@gmail.com | 9876543213 | Trichy |
+| 105 | Rahul Kumar | rahul@gmail.com | 9876543214 | Salem |
 
-SELECT * FROM Customer;
-to verify that the record was removed.
+## Database Constraints
 
-9. CRUD Operations
-We implemented the four basic database operations:
+The Customer table uses the following constraints:
 
-Operation	SQL Command	Purpose
-Create	INSERT	Add new customer
-Read	SELECT	View customer data
-Update	UPDATE	Modify customer data
-Delete	DELETE	Remove customer data
-Week 1 Output
-We generated sample outputs for:
+- PRIMARY KEY is used for Customer_ID.
+- NOT NULL is used for required customer information.
+- UNIQUE is used for Email to prevent duplicate email addresses.
+- UNIQUE is used for Phone to prevent duplicate phone numbers.
 
-Customer table structure
-Inserted customer records
-Updated customer record
-Deleted customer record
-These outputs were captured as screenshots for the project submission.
+## Project Structure
 
-What We Learned
-Through this module, we learned:
+Week-1/
 
-How to analyze database requirements
-How to identify entities
-How to design a database table
-How to create a database using MySQL
-How to create tables with constraints
-How to insert records
-How to retrieve records
-How to update records
-How to delete records
-How CRUD operations work in a database
-Future Development
-In the upcoming modules, the database can be expanded by adding:
+├── README.md  
+├── Requirement_Analysis.docx  
+├── Customer_Table_Design.docx  
+├── Customer_Database.sql  
+└── Screenshots/
 
-Product Management
-Seller Management
-Order Management
-Payment Management
-Review Management
-Relationships between tables
-Foreign Keys
-Advanced SQL Queries
+    ├── table_structure.png
+    ├── select_output.png
+    ├── update_output.png
+    └── delete_output.png
 
-Conclusion
-In Week 1, we successfully completed the Requirement Analysis and Customer Database Module. We designed the Customer table, created the e-commerce database, inserted sample data, and performed all four CRUD operations using MySQL.
+## Expected Outcome
+
+The project provides an organized way to store and manage customer information for an E-Commerce system. The Customer table supports basic CRUD operations while using database constraints to maintain data accuracy and consistency.
+
+## Conclusion
+
+The Week 1 module covers the requirement analysis, identification of major entities, Customer table design, database creation, customer record insertion, and CRUD operations for an E-Commerce Business Management System.
