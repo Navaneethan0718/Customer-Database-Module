@@ -274,3 +274,141 @@ By creating Category and Product tables and connecting them using a Primary Key 
 Using CRUD operations and category-wise SQL queries, we can add, view, update, delete, and analyze product data.
 
 This project helps us understand the practical use of SQL and relational databases in a simple product management system.
+
+# WEEK-3 Inventory Management and Analysis System
+
+## Project Overview
+
+The Inventory Management and Analysis System is a MySQL database project used to store and manage information about categories, products, sellers, and inventory.
+
+The main purpose of this project is to keep inventory information organized and to make it easy to analyze product availability using SQL queries.
+
+## Why Are We Doing This Project?
+
+In a business, many products may be supplied by different sellers. It is important to know how many products are available, which products are out of stock, and which products have the highest stock.
+
+Maintaining this information manually can be difficult. This project uses a relational database to store the information in separate but connected tables.
+
+## What Are We Doing?
+
+This project contains four main tables:
+
+1. Category
+   - Stores product categories.
+
+2. Product
+   - Stores product names, prices, and their categories.
+
+3. Seller
+   - Stores information about sellers who supply products.
+
+4. Inventory
+   - Stores the quantity of each product and its reorder level.
+
+The tables are connected using primary keys and foreign keys.
+
+## Database Structure
+
+Category 1 : N Product
+
+Product 1 : N Inventory
+
+Seller 1 : N Inventory
+
+The Inventory table connects products with sellers and stores the available quantity.
+
+## Main Features
+
+- Store category information
+- Store product information
+- Store seller information
+- Track product inventory
+- Add new records
+- View existing records
+- Update records
+- Delete records
+- Analyze inventory information
+
+## CRUD Operations
+
+CRUD stands for:
+
+C - Create
+R - Read
+U - Update
+D - Delete
+
+Create is used to add new seller and inventory records.
+
+Read is used to display information from the database.
+
+Update is used to modify existing records.
+
+Delete is used to remove records from the database.
+
+## Inventory Analysis
+
+The project performs the following inventory analysis:
+
+1. Total Products Available
+   - Finds the number of products that currently have stock available.
+
+2. Products Out of Stock
+   - Finds products whose inventory quantity is zero.
+
+3. Highest Stocked Products
+   - Finds the product or products having the highest inventory quantity.
+
+4. Average Inventory Quantity
+   - Calculates the average quantity of products available in the inventory.
+
+## Technologies Used
+
+Database: MySQL
+
+Tool: MySQL Workbench
+
+Language: SQL
+
+Database Type: Relational Database
+
+## Project Tables
+
+Category
+
+- category_id
+- category_name
+
+Product
+
+- product_id
+- product_name
+- price
+- category_id
+
+Seller
+
+- seller_id
+- seller_name
+- phone
+- email
+
+Inventory
+
+- inventory_id
+- product_id
+- seller_id
+- quantity
+- reorder_level
+
+## Project Outcome
+
+After completing this project, the user can manage products, categories, sellers, and inventory in a structured database.
+
+The SQL queries can be used to identify available products, out-of-stock products, highest stocked products, and the average inventory quantity.
+
+## Conclusion
+
+The Inventory Management and Analysis System provides a simple and organized way to manage inventory using MySQL. By connecting the Category, Product, Seller, and Inventory tables, the system keeps related information together and makes inventory analysis easier using SQL queries.
+
+
